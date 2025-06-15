@@ -1,0 +1,4 @@
+pynput
+cryptography
+pywin32
+psutil
