@@ -117,7 +117,3 @@ For educational and ethical research purposes only. Do **not** deploy in product
 
 ```
 
----
-
-Let me know if you'd like this saved in a `README.md` file or if you're ready for the **PDF report** now!
-```
