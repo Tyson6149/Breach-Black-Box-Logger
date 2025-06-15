@@ -1,0 +1,129 @@
+[2025-06-14 21:25:00] [New Tab - Google Chrome] d
+[2025-06-14 21:25:00] [New Tab - Google Chrome] f
+[2025-06-14 21:25:00] [New Tab - Google Chrome] j
+[2025-06-14 21:25:00] [New Tab - Google Chrome] d
+[2025-06-14 21:25:00] [New Tab - Google Chrome] v
+[2025-06-14 21:25:00] [New Tab - Google Chrome] i
+[2025-06-14 21:25:00] [New Tab - Google Chrome] d
+[2025-06-14 21:25:02] [New Tab - Google Chrome] v
+[2025-06-14 21:25:02] [New Tab - Google Chrome] s
+[2025-06-14 21:25:02] [New Tab - Google Chrome] v
+[2025-06-14 21:25:03] [New Tab - Google Chrome] s
+[2025-06-14 21:25:03] [New Tab - Google Chrome] d
+[2025-06-14 21:25:03] [New Tab - Google Chrome] v
+[2025-06-14 21:25:03] [New Tab - Google Chrome] v
+[2025-06-14 21:25:03] [New Tab - Google Chrome] a
+[2025-06-14 21:25:03] [New Tab - Google Chrome] d
+[2025-06-14 21:25:03] [New Tab - Google Chrome] v
+[2025-06-14 21:25:03] [New Tab - Google Chrome] d
+[2025-06-14 21:25:09] [C:\WINDOWS\system32\cmd.exe - python  simple_keylogger.py] Key.enter
+[2025-06-14 21:25:14] [C:\WINDOWS\system32\cmd.exe - python  simple_keylogger.py] Key.esc
+[2025-06-14 21:25:40] [C:\WINDOWS\system32\cmd.exe - python  simple_keylogger.py] Key.ctrl_l
+[2025-06-14 21:25:41] [C:\WINDOWS\system32\cmd.exe - python  simple_keylogger.py] 
+[2025-06-14 21:25:42] [Triple quotes in Python - Google Chrome] Key.ctrl_l
+[2025-06-14 21:25:42] [Triple quotes in Python - Google Chrome] 
+[2025-06-14 21:25:43] [Triple quotes in Python - Google Chrome] Key.enter
+[2025-06-14 21:26:16] [Triple quotes in Python - Google Chrome] g
+[2025-06-14 21:26:17] [Triple quotes in Python - Google Chrome] i
+[2025-06-14 21:26:17] [Triple quotes in Python - Google Chrome] v
+[2025-06-14 21:26:18] [Triple quotes in Python - Google Chrome] e
+[2025-06-14 21:26:18] [Triple quotes in Python - Google Chrome] Key.space
+[2025-06-14 21:26:19] [Triple quotes in Python - Google Chrome] f
+[2025-06-14 21:26:19] [Triple quotes in Python - Google Chrome] u
+[2025-06-14 21:26:20] [Triple quotes in Python - Google Chrome] l
+[2025-06-14 21:26:20] [Triple quotes in Python - Google Chrome] l
+[2025-06-14 21:26:21] [Triple quotes in Python - Google Chrome] Key.space
+[2025-06-14 21:26:22] [Triple quotes in Python - Google Chrome] c
+[2025-06-14 21:26:22] [Triple quotes in Python - Google Chrome] o
+[2025-06-14 21:26:22] [Triple quotes in Python - Google Chrome] d
+[2025-06-14 21:26:22] [Triple quotes in Python - Google Chrome] e
+[2025-06-14 21:26:22] [Triple quotes in Python - Google Chrome] Key.enter
+[2025-06-14 21:26:50] [C:\WINDOWS\system32\cmd.exe - python  simple_keylogger.py] Key.esc
+[2025-06-15 19:09:24] [C:\WINDOWS\system32\cmd.exe - C:\keyloggerproject\keylogger_encrypted.py] Key.enter
+[2025-06-15 19:09:43] [C:\WINDOWS\system32\cmd.exe - C:\keyloggerproject\keylogger_encrypted.py] Key.ctrl_l
+[2025-06-15 19:09:43] [C:\WINDOWS\system32\cmd.exe - C:\keyloggerproject\keylogger_encrypted.py] 
+[2025-06-15 19:09:46] [C:\WINDOWS\system32\cmd.exe - C:\keyloggerproject\keylogger_encrypted.py] Key.esc
+[2025-06-15 19:11:50] [Encrypted Keylogger Explanation - Google Chrome] Key.ctrl_l
+[2025-06-15 19:11:51] [Encrypted Keylogger Explanation - Google Chrome] 
+[2025-06-15 19:11:51] [Encrypted Keylogger Explanation - Google Chrome] Key.ctrl_l
+[2025-06-15 19:11:53] [Encrypted Keylogger Explanation - Google Chrome] 
+[2025-06-15 19:11:53] [Encrypted Keylogger Explanation - Google Chrome] Key.enter
+[2025-06-15 19:12:02] [C:\WINDOWS\system32\cmd.exe - python  keylogger_encrypted.py] Key.ctrl_l
+[2025-06-15 19:12:03] [C:\WINDOWS\system32\cmd.exe - python  keylogger_encrypted.py] 
+[2025-06-15 19:12:04] [Encrypted Keylogger Explanation - Google Chrome] Key.ctrl_l
+[2025-06-15 19:12:05] [Encrypted Keylogger Explanation - Google Chrome] 
+[2025-06-15 19:12:06] [Encrypted Keylogger Explanation - Google Chrome] Key.enter
+[2025-06-15 19:12:25] [C:\WINDOWS\system32\cmd.exe - python  keylogger_encrypted.py] Key.esc
+[2025-06-15 19:23:15] [C:\WINDOWS\system32\cmd.exe - python  keylogger_encrypted.py] Key.esc
+[2025-06-15 19:24:45] [C:\WINDOWS\system32\cmd.exe - python  keylogger_encrypted.py] Key.esc
+[2025-06-15 19:29:09] [C:\WINDOWS\system32\cmd.exe - python  keylogger_encrypted.py] Key.esc
+[2025-06-15 19:29:41] [C:\WINDOWS\system32\cmd.exe - python  keylogger_encrypted.py] Key.esc
+[2025-06-15 19:30:20] [New Tab - Google Chrome] f
+[2025-06-15 19:30:20] [New Tab - Google Chrome] f
+[2025-06-15 19:30:20] [New Tab - Google Chrome] m
+[2025-06-15 19:30:20] [New Tab - Google Chrome] g
+[2025-06-15 19:30:20] [New Tab - Google Chrome] k
+[2025-06-15 19:30:20] [New Tab - Google Chrome] n
+[2025-06-15 19:30:21] [New Tab - Google Chrome] k
+[2025-06-15 19:30:21] [New Tab - Google Chrome] s
+[2025-06-15 19:30:21] [New Tab - Google Chrome] n
+[2025-06-15 19:30:21] [New Tab - Google Chrome] v
+[2025-06-15 19:30:21] [New Tab - Google Chrome] n
+[2025-06-15 19:30:21] [New Tab - Google Chrome] r
+[2025-06-15 19:30:21] [New Tab - Google Chrome] w
+[2025-06-15 19:30:21] [New Tab - Google Chrome] k
+[2025-06-15 19:30:21] [New Tab - Google Chrome] s
+[2025-06-15 19:30:21] [New Tab - Google Chrome] Key.space
+[2025-06-15 19:30:21] [New Tab - Google Chrome] v
+[2025-06-15 19:30:21] [New Tab - Google Chrome] j
+[2025-06-15 19:30:21] [New Tab - Google Chrome] s
+[2025-06-15 19:30:21] [New Tab - Google Chrome] j
+[2025-06-15 19:30:21] [New Tab - Google Chrome] v
+[2025-06-15 19:30:21] [New Tab - Google Chrome] Key.space
+[2025-06-15 19:30:22] [New Tab - Google Chrome] j
+[2025-06-15 19:30:22] [New Tab - Google Chrome] d
+[2025-06-15 19:30:22] [New Tab - Google Chrome] v
+[2025-06-15 19:30:22] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:22] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:23] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:23] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:23] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.backspace
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.shift_r
+[2025-06-15 19:30:24] [New Tab - Google Chrome] Key.enter
+[2025-06-15 19:30:25] [ffmgknksnvnrw - Google Search - Google Chrome] Key.backspace
+[2025-06-15 19:30:25] [ffmgknksnvnrw - Google Search - Google Chrome] v
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] s
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] f
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] v
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] v
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] r
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] g
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] g
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] r
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] r
+[2025-06-15 19:30:26] [ffmgknksnvnrw - Google Search - Google Chrome] s
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] r
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] r
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] g
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] g
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] r
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] g
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] r
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] r
+[2025-06-15 19:30:27] [ffmgknksnvnrw - Google Search - Google Chrome] g
+[2025-06-15 19:30:28] [ffmgknksnvnrw - Google Search - Google Chrome] f
+[2025-06-15 19:30:31] [New Tab - Google Chrome] m
+[2025-06-15 19:30:32] [New Tab - Google Chrome] a
+[2025-06-15 19:30:32] [New Tab - Google Chrome] n
+[2025-06-15 19:30:32] [New Tab - Google Chrome] g
+[2025-06-15 19:30:32] [New Tab - Google Chrome] a
+[2025-06-15 19:30:32] [New Tab - Google Chrome] '
+[2025-06-15 19:30:33] [New Tab - Google Chrome] Key.enter
+[2025-06-15 19:30:37] [C:\WINDOWS\system32\cmd.exe - python  keylogger_encrypted.py] Key.esc
